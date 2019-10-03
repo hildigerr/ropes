@@ -15,8 +15,6 @@
 minetest.register_on_punchnode(function(pos, oldnode, digger)
     if oldnode.name == "ropes:rope" then
 		remove_rope(pos, oldnode, digger, "ropes:rope")
-    elseif oldnode.name == "moreblocks:rope" then
-		remove_rope(pos, oldnode, digger, "moreblocks:rope")
     end
 end)
 
@@ -138,6 +136,13 @@ minetest.register_node("ropes:rope", {
 })
 
 if minetest.get_modpath("moreblocks") ~= nil then
+
+    minetest.register_on_punchnode(function(pos, oldnode, digger)
+        if oldnode.name == "moreblocks:rope" then
+            remove_rope(pos, oldnode, digger, "moreblocks:rope")
+        end
+    end)
+
 	minetest.register_node(":moreblocks:rope", {
 		description = "Rope",
 		drawtype = "signlike",
