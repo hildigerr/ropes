@@ -70,9 +70,9 @@ end
 minetest.register_craft({
     output = '"ropes:rope" 2',
     recipe = {
-        {'flowers:cotton'},
-        {'flowers:cotton'},
-        {'flowers:cotton'},
+        {'farming:cotton'},
+        {'farming:cotton'},
+        {'farming:cotton'},
     }
 })
 
@@ -154,10 +154,9 @@ if minetest.get_modpath("moreblocks") ~= nil then
 	})
 end
 
-if minetest.get_modpath("farming") ~= nil then
-	minetest.register_craft({
-		type = "shapeless",
-		 output = "ropes:rope",
-		 recipe = { "farming:string","farming:string", }
-	})
-end
+
+minetest.register_craft({
+	type = "shapeless",
+	 output = "ropes:rope",
+	 recipe = { "farming:string","farming:string", }
+})
