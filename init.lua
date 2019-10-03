@@ -98,15 +98,6 @@ minetest.register_craft({
     }
 })
 
-minetest.register_craft({
-    output = '"ropes:rope" 4',
-    recipe = {
-        {'homedecor:curtain_white'},
-        {'homedecor:curtain_white'},
-        {'homedecor:curtain_white'},
-    }
-})
-
 minetest.register_node("ropes:rope", {
     description = "Rope",
     drawtype = "signlike",
