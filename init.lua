@@ -68,7 +68,13 @@ remove_rope = function(pos, oldnode, digger, rope_name)
 end
 
 minetest.register_craft({
-    output = '"ropes:rope" 2',
+	type = "shapeless",
+	 output = "ropes:rope",
+	 recipe = { "farming:string", "farming:string", "farming:string", }
+})
+
+minetest.register_craft({
+    output = "ropes:rope",
     recipe = {
         {'farming:cotton'},
         {'farming:cotton'},
@@ -77,7 +83,7 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
-    output = '"ropes:rope" 6',
+    output = '"ropes:rope" 4',
     recipe = {
         {'wool:white','',''},
         {'','wool:white',''},
@@ -86,7 +92,7 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
-    output = '"ropes:rope" 6',
+    output = '"ropes:rope" 4',
     recipe = {
         {'','','wool:white'},
         {'','wool:white',''},
@@ -95,7 +101,7 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
-    output = '"ropes:rope" 6',
+    output = '"ropes:rope" 4',
     recipe = {
         {'homedecor:curtain_white'},
         {'homedecor:curtain_white'},
@@ -153,10 +159,3 @@ if minetest.get_modpath("moreblocks") ~= nil then
 		sounds = default.node_sound_leaves_defaults(),
 	})
 end
-
-
-minetest.register_craft({
-	type = "shapeless",
-	 output = "ropes:rope",
-	 recipe = { "farming:string","farming:string", }
-})
