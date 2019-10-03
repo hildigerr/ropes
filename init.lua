@@ -1,7 +1,7 @@
 -- Rope mod. By Mirko K.
---		modified by Temperest <http://minetest.net/forum/profile.php?id=640> [FEB 2012]
---		modified by Wulfsdad <http://minetest.net/forum/profile.php?id=3738> [DEC 2012]
---		
+--		modified by Temperest <http://minetest.net/forum/memberlist.php?mode=viewprofile&u=640> [FEB 2012]
+--		modified by Wulfsdad <http://minetest.net/forum/memberlist.php?mode=viewprofile&u=3738> [DEC 2012]
+--
 -- Placement automatically adds rope downwards until it runs out or some
 -- non-air block is in the way.
 -- Push (single left-click) cuts the rope at that position. Digging removes
@@ -15,9 +15,9 @@
 minetest.register_on_punchnode(function(pos, oldnode, digger)
     if oldnode.name == "ropes:rope" then
 		remove_rope(pos, oldnode, digger, "ropes:rope")
-	 elseif oldnode.name == "moreblocks:rope" then
+    elseif oldnode.name == "moreblocks:rope" then
 		remove_rope(pos, oldnode, digger, "moreblocks:rope")
-	 end
+    end
 end)
 
 place_rope = function(itemstack, placer, pointed_thing)

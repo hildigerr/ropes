@@ -1,6 +1,6 @@
  Rope mod for Minetest. By Mirko K.
+ With Modifications by Temperest [FEB 2012] and wulfsdad [DEC 2012].
 
- Three tree block in a vertical row = 9 meter of rope.
  Placement automatically adds rope downwards until it runs out or some
  non-air block is in the way.
  Push (single left-click) cuts the rope at that position. Digging removes
