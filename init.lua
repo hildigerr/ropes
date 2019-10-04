@@ -101,9 +101,9 @@ minetest.register_craft({
 minetest.register_node("ropes:rope", {
     description = "Rope",
     drawtype = "signlike",
-    tile_images = {"rope.png"},
-    inventory_image = "rope.png",
-	 wield_image = "rope.png",
+    tile_images = {"ropes_rope.png"},
+    inventory_image = "ropes_rope.png",
+	 wield_image = "ropes_rope.png",
     light_propagates = true,
     paramtype = "light",
     paramtype2 = "wallmounted",
