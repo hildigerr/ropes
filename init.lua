@@ -83,18 +83,18 @@ minetest.register_craft({
 minetest.register_craft({
     output = '"ropes:rope" 4',
     recipe = {
-        {'wool:white','',''},
-        {'','wool:white',''},
-        {'','','wool:white'},
+        {'group:wool','',''},
+        {'','group:wool',''},
+        {'','','group:wool'},
     }
 })
 
 minetest.register_craft({
     output = '"ropes:rope" 4',
     recipe = {
-        {'','','wool:white'},
-        {'','wool:white',''},
-        {'wool:white','',''},
+        {'','','group:wool'},
+        {'','group:wool',''},
+        {'group:wool','',''},
     }
 })
 
