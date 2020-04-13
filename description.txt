@@ -1,1 +1,0 @@
-Adds climbable ropes which are quick and easy to place and retrieve. Allows rope from moreblocks to be used this way too.
