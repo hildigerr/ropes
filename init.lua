@@ -27,7 +27,7 @@ place_rope = function(itemstack, placer, pointed_thing)
         local param2_wallmounted = minetest.dir_to_wallmounted(dir)
 
         local pos = above
-        local oldnode = minetest.env:get_node(pos)
+        local oldnode = minetest.get_node(pos)
         local olddef = ItemStack({name=oldnode.name}):get_definition()
 
         while oldnode.name == "air" and not itemstack:is_empty() do
@@ -36,7 +36,7 @@ place_rope = function(itemstack, placer, pointed_thing)
 
             -- Place the rope
 				local newnode = {name = itemstack:get_name(), param1 = 0, param2 = param2_wallmounted}
-            minetest.env:add_node(pos, newnode)
+            minetest.add_node(pos, newnode)
             itemstack:take_item()
 
             -- if you want, call all callbacks in minetest.registered_on_placenodes here
@@ -44,7 +44,7 @@ place_rope = function(itemstack, placer, pointed_thing)
 
             -- Go down
             pos.y = pos.y - 1
-            oldnode = minetest.env:get_node(pos)
+            oldnode = minetest.get_node(pos)
             olddef = ItemStack({name=oldnode.name}):get_definition()
         end
     end
@@ -54,8 +54,8 @@ end
 remove_rope = function(pos, oldnode, digger, rope_name)
     local num = 0
     local below = {x=pos.x,y=pos.y,z=pos.z}
-    while minetest.env:get_node(below).name == rope_name do
-		minetest.env:remove_node(below)
+    while minetest.get_node(below).name == rope_name do
+		minetest.remove_node(below)
 		below.y = below.y -1
 		num = num + 1
     end
